@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{product.name}} Detail -- {{block.super}}
+{% endblock %}
+
+{% block image %}
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>{{product.name}}`s Detail</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Shop</a></li>
+                    <li class="breadcrumb-item active">{{product.name}}`s Detail </li>
+                    <li class="breadcrumb-item active">Scroll Down </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="shop-detail-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-6">
+            <div class="carousel-item active"> 
+                <img class="d-block w-100" src="{{product.photo.url}}" alt="First slide"> 
+            </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-6">
+                <div class="single-product-details">
+                    <h2>{{product.name}}</h2>
+                    <h5> <del>$ {{product.old_price}}</del> ${{product.price}}</h5>
+                    <h4>Description:</h4>
+                    <p>{{product.description}}</p>
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'add_cart' product.slug %}" class="btn btn-outline-dark lg">Add To Cart</a>
+                    {% endif %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Cart -->
+{% endblock %}

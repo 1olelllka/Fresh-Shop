@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+ <!-- Start Cart  -->
+    <div class="cart-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-6 mb-3">
+                    <div class="checkout-address">
+                        <div class="title-left">
+                            <h3>Billing address</h3>
+                        </div>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">First name *</label>
+                                    {{form.first_name}}
+                                    <div class="invalid-feedback"> Valid first name is required. </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Last name *</label>
+                                    {{form.last_name}}
+                                    <div class="invalid-feedback"> Valid last name is required. </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">Email Address *</label>
+                                {{form.email}}
+                                <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address">Address *</label>
+                                {{form.adress}}
+                                <div class="invalid-feedback"> Please enter your shipping address. </div>
+                            </div>
+                            <div class="col-12 d-flex shopping-box"> <button type="submit" class="ml-auto btn hvr-hover btn-lg" style="color:white">Place Order</> </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-6 mb-3">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="odr-box">
+                                <div class="title-left">
+                                    <h3>Shopping cart</h3>
+                                </div>
+                                <div class="rounded p-2 bg-light">
+                                    {% for item in product %}
+                                    <div class="media mb-2 border-bottom">
+                                        <div class="media-body"> <a href="{{item.product.get_absolute_url}}"> {{item.product.name}}</a>
+                                            <div class="small text-muted">Price: ${{item.product.price}} Per item <span class="mx-2">|</span> Qty: {{item.quantity}}</div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12">
+                            <div class="order-box">
+                                <div class="title-left">
+                                    <h3>Your order</h3>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="ml-auto font-weight-bold">Total</div>
+                                </div>
+                                <hr class="my-1">
+                                <div class="d-flex">
+                                    {% if total %}
+                                    <div class="ml-auto font-weight-bold" style="margin-top: 40px;"> $ {{total}} </div>
+                                    {% else %}
+                                    <div class="ml-auto font-weight-bold" style="margin-top: 40px;"> $ 0 </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Cart -->
+{% endblock %}
