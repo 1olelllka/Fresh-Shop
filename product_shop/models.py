@@ -52,12 +52,6 @@ class GetInTouch(models.Model):
         verbose_name = 'Get In Touch'
         verbose_name_plural = 'Get In Touch'
 
-# class Checkout(models.Model):
-#     first_name = models.CharField(max_length=120)
-#     last_name = models.CharField(max_length=120)
-#     email = models.EmailField()
-#     address = models.CharField(max_length=120)
-#     total = models.ManyToManyField(Cart, default=None)
 
 class ProductOrder(models.Model):
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
