@@ -7,6 +7,17 @@
 ```diff
 ! This template was used ONLY for educational purposes !
 ```
+<h4>Technologies used:</h4>
+<ul>
+  <li>Backend -> Django v4.1.13</li>
+  <li>Frontend:</li>
+  <ul>
+    <li>HTML5 with DTL</li>
+    <li>CSS3</li>
+    <li>Bootstrap v4.1.0</li>
+    <li>JS (mostly was provided by template itself)</li>
+  </ul>
+</ul>
 <h3>Some Images from the project:</h3>
 <hr>
 <img width="1437" alt="Screenshot 2024-03-19 at 17 45 02" src="https://github.com/1olelllka/Fresh-Shop/assets/67587036/bdc074bf-3442-4349-a61c-94201561b4d5">
