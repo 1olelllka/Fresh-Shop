@@ -18,6 +18,11 @@
     <li>JS (mostly was provided by template itself)</li>
   </ul>
 </ul>
+<h3>Project Limitations and Problems:</h3>
+<ul>
+  <li>Problem with pagination (in terms of photos size)</li>
+  <li>Poor design of cart</li>
+</ul>
 <h3>Some Images from the project:</h3>
 <hr>
 <img width="1437" alt="Screenshot 2024-03-19 at 17 45 02" src="https://github.com/1olelllka/Fresh-Shop/assets/67587036/bdc074bf-3442-4349-a61c-94201561b4d5">
