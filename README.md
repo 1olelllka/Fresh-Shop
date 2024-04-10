@@ -7,6 +7,7 @@
 ```diff
 ! This template was used ONLY for educational purposes !
 ```
+
 <h4>Technologies used:</h4>
 <ul>
   <li>Backend -> Django v4.1.13</li>
@@ -18,6 +19,14 @@
     <li>JS (mostly was provided by template itself)</li>
   </ul>
 </ul>
+
+```diff
+- Before running this project on your machine, run this command on back-end:
+
+python3 (or any other version of python) manage.py collectstatic
+
+```
+
 <h3>Project Limitations and Problems:</h3>
 <ul>
   <li>Problem with pagination (in terms of photos size)</li>
