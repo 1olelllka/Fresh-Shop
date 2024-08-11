@@ -1,7 +1,7 @@
 <h1>FreshShop</h1>
-<h6>The project was originally created in December 2020.</h6>
-<h6>In 2024, I decided to update the dependencies and check if everything works fine. Also added some microfixes</h6>
-<h3>Template:</h3>
+<h4>This is a grocery shop project, where you can buy vegetables and fruits. The project itself does not include payment system. Treat it as a simple CRUD project.</h4>
+<h6>The project was originally created in December 2020. The purpose of the project was to learn and apply my knowledge about Django Framework.</h6>
+<h3>The frontend template:</h3>
 <p>https://www.free-css.com/free-css-templates/page246/freshshop</p>
 
 ```diff
@@ -10,7 +10,11 @@
 
 <h4>Technologies used:</h4>
 <ul>
-  <li>Backend -> Django v4.1.13</li>
+  <li>Backend</li>
+    <ul>
+      <li>Django v4.1.13</li>
+      <li>SQLite</li>
+    </ul>
   <li>Frontend:</li>
   <ul>
     <li>HTML5 with DTL</li>
@@ -21,16 +25,15 @@
 </ul>
 
 ```diff
-- Before running this project on your machine, run this command on back-end:
-
-python3 (or any other version of python) manage.py collectstatic
+- The project cannot be started out of the box. This issue will be fixed through the containerization soon.
 
 ```
 
-<h3>Project Limitations and Problems:</h3>
+<h3>Project's issues (I hope, I'll fix them very soon)</h3>
 <ul>
   <li>Problem with pagination (in terms of photos size)</li>
   <li>Poor design of cart</li>
+  <li>Cannot be started out of the box</li>
 </ul>
 <h3>Some Images from the project:</h3>
 <hr>
