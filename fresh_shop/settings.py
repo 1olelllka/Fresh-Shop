@@ -7,10 +7,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'c^uwuwh6+8i=$t2+vh1#yylzz-a10u3u)doec4%^f!al7z3%as'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# Without debug the static files won't work.
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'mptt',
-    'debug_toolbar',
+    # 'debug_toolbar',
 
     'product_shop',
 ]
@@ -42,7 +42,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'fresh_shop.urls'
@@ -54,7 +54,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
+                # 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',

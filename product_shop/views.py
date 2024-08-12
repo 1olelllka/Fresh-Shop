@@ -16,7 +16,7 @@ from .forms import CheckoutForm, GetInTouchForm, UserReg, UserLog
 class MainPage(ListView):
     context_object_name = 'products'
     template_name = 'product_shop/index.html'
-    paginate_by = 2
+    paginate_by = 4 # Change if you want to have more or less products on one page
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
