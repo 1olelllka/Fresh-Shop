@@ -1,44 +1,53 @@
-<h1>FreshShop</h1>
-<h4>This is a grocery shop project, where you can buy vegetables and fruits. The project itself does not include payment system. Treat it as a simple CRUD project.</h4>
-<h6>The project was originally created in December 2020. The purpose of the project was to learn and apply my knowledge about Django Framework. This is my very first project.</h6>
-<h3>The frontend template:</h3>
-<p>https://www.free-css.com/free-css-templates/page246/freshshop</p>
+# FreshShop - Freshness Picked Daily, Health Delivered Naturally! (Django)
+This is a beginner-level grocery shop project created using Django, where users can browse, add, and manage fruits and vegetables.
 
-```diff
-! This template was used ONLY for educational purposes !
-```
+---
 
-- **Backend**:
-  - Django v4.1.13
-  - Django-Mptt (for the contact us feature)
-  - SQLite
-- **Frontend**:
-  - HTML5 with DTL
-  - CSS3
-  - Bootstrap v4.1.0
-  - JS (mostly provided by the template)
+## Project Overview
 
+- **Backend**: Django v4.1.13
+  - **Database**: SQlite3
+- **Frontend**: HTML5, Django Template Language (DTL), CSS3, Bootstrap v4.1.0, Vanilla JS
 
-<h4>Important notices</h4>
-<ul>
-  <li>The contact us feature doesn't work unless you configured mptt service in settings.py - You need to add your credentials.</li>
-  <li>The sample data was added by myself. As the current db is sqlite3, it isn't a big deal.</li>
-  <li>In order to access admin panel -- username: testUser -- password: password1234</li>
-  <li>For those who want to add photos to product catalogue, it's recommended to attach 400x400 photo.</li>
-  <li>The project is on debug mode, as the static files won't load without it. I don't intend to set up reverse proxy like Nginx</li>
-  <li>In settings.py the security key is visible. The project does not have any market value so I would think that this fact might be neglected</li>
-</ul>
+## Installation and Setup
 
-**Installation:**
-*You need to have Docker and docker-compose installed*
-```diff
-docker compose up
-```
+1. Go to the `settings.py` inside the `fresh_shop` directory:
+   ```bash
+   cd fresh_shop
+   ```
+2. Scroll down and change the following code by inserting your data:
+   ```python
+   EMAIL_HOST_USER = '<your-gmail>'     
+   EMAIL_HOST_PASSWORD = '<your-password-or-code>'
+   ```
+   This is essential for Contact Us feature, as it sends a sample email to the user.
+3. Make sure you have Docker and docker-compose installed.
+4. Run the following from the project root:
+   
+   ```bash
+   docker compose up
+   ```
+5. You are ready to use the app.
 
-<h3>Some Images from the project:</h3>
-<hr>
+### Important Notices
+  - Sample data includes preloaded products such as fruits and vegetables stored in the SQLite3 database.
+  - In order to access admin panel on URI `/admin/`:
+    
+    ```plain
+    username: testUser
+    password: password1234
+    ```
+  - For those who want to add photos to product catalogue, it's recommended to attach 400x400 photo.
+  - The project is currently running in debug mode, which is useful for development and testing. However, be aware that in production, this should be turned off for security reasons.
+  - Although the security key is exposed here for simplicity, best practice in production is to use environment variables to keep sensitive data secure.
+
+#### Disclamer
+The frontend design was adapted from a free template for educational purposes only. It serves as a visual aid for learning, and the template can be found here: 
+https://www.free-css.com/free-css-templates/page246/freshshop
+
+---
+
+## Screenshots
 <img width="1437" alt="Screenshot 2024-03-19 at 17 45 02" src="https://github.com/1olelllka/Fresh-Shop/assets/67587036/bdc074bf-3442-4349-a61c-94201561b4d5">
 <img width="1440" alt="Screenshot 2024-03-19 at 17 47 33" src="https://github.com/1olelllka/Fresh-Shop/assets/67587036/c6cf5c87-d3a8-4ab4-865c-f94f9eb70818">
-<img width="1440" alt="Screenshot 2024-03-19 at 17 48 35" src="https://github.com/1olelllka/Fresh-Shop/assets/67587036/af057865-ac87-4314-aee8-69b9211ba4a7">
 <img width="1440" alt="Screenshot 2024-03-19 at 17 49 43" src="https://github.com/1olelllka/Fresh-Shop/assets/67587036/a5f7e091-17d2-4b0d-9a56-123e3e7d67d8">
-<img width="1438" alt="Screenshot 2024-03-19 at 17 50 14" src="https://github.com/1olelllka/Fresh-Shop/assets/67587036/e78552aa-a144-4d06-a55f-217c6a35e186">
